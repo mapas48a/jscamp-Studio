@@ -1,7 +1,6 @@
 import { state } from './config.js'
 
 state.count++
-
 console.log(state)
 
 const filter = document.querySelector('#filter-location')
