@@ -3,6 +3,8 @@ name: 01 - Hello
 on:
   push:
     branches: [main]
+  pull_request:
+    branches: [main]
 
 jobs:
   hello:
@@ -15,4 +17,13 @@ jobs:
         run: date
 
       - name: Ver archivos disponibles
+        run: ls -la
+
+  repo-files:
+    runs-on: ubuntu-slim
+    steps:
+      - name: Descargar todo el codigo del repo.
+        uses: actions/checkout@v7
+
+      - name: Ver archivos del repo
         run: ls -la
