@@ -1,0 +1,14 @@
+name: 02 - Manual Estudio
+
+on:
+  workflow_dispatch:
+
+jobs:
+  prueba-manual: # esto es el nombre del trabajo entero
+    runs-on: ubuntu-slim # en que maquina va a correr
+    steps: # los pasos que va a hacer...
+      - name: Saludo # nombre de los pasos
+        run: echo "¡Hola, mundo! esto es un prueba locaaa" # el commando a ejecutar
+
+      - name: Preguntar sobre node
+        run: node -v
